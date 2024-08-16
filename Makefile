@@ -47,7 +47,7 @@ release:
 
 local-release: clean
 	set -o errexit; \
-	for OS in darwin linux windows; do \
+	for OS in linux; do \
 		EXT=; \
 		ARCHS=; \
 		case $$OS in \
@@ -55,7 +55,7 @@ local-release: clean
 				ARCHS='amd64 arm64'; \
 				;; \
 			linux) \
-				ARCHS='386 amd64 arm arm64'; \
+				ARCHS='loong64'; \
 				;; \
 			windows) \
 				ARCHS='386 amd64 arm64'; \
